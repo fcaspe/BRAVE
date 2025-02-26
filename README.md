@@ -1,7 +1,7 @@
 <h1 align="center">Designing Neural Synthesizers for Low Latency Interaction</h1>
 <div align="center">
 <h3>
-    <a href="http://insert_link_here" target="_blank">paper</a> - <a href="https://fcaspe.github.io/brave" target="_blank">website</a> - <a href="https://fcaspe.github.io/brave" target="_blank">evaluation</a> - <a href="https://fcaspe.github.io/brave" target="_blank">plugin</a>
+    <a href="http://insert_link_here" target="_blank">paper</a> - <a href="https://fcaspe.github.io/brave" target="_blank">website</a> - <a href="https://fcaspe.github.io/brave" target="_blank">evaluation pack</a> - <a href="https://fcaspe.github.io/brave" target="_blank">plugin</a>
 </h3>
 
 </div>
@@ -14,7 +14,7 @@ This repo contains the official Pytorch implementaiton of **BRAVE** a low-latenc
 We use the **acids-rave** package for preprocessing the data and training the models.
 
 ```bash
-pip install acids-rave==2.3 h5py # may work with lower versions too.
+pip install h5py acids-rave==2.3 # may work with lower versions too.
 conda install ffmpeg
 # [TODO] git clone the repo chdir
 ```

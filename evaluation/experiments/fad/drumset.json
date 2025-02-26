@@ -1,0 +1,12 @@
+{
+    "background_path": "./dataset/drumset/train/",
+    "resynth_paths": [
+        "./experiments/reconstructions/BRAVE-drumset/drumset/",
+        "./experiments/reconstructions/c128_r05_p40-drumset/drumset",
+        "./experiments/reconstructions/c128_r10_p40-drumset/drumset",
+        "./experiments/reconstructions/c128_r10-drumset/drumset",
+        "./experiments/reconstructions/c2048_r10-drumset/drumset",
+        "./experiments/reconstructions/RAVE-drumset/drumset",
+        "./experiments/test_audios/drumset"
+    ]
+}
