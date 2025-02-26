@@ -18,7 +18,7 @@ All implementations are available at the `configs` directory of this repo. Just 
 ```bash
 rave train --config ./configs/SELECTED_MODEL.gin --gpu 0
 ```
-After 1.5M steps, the training script will write a checkpoint named `epoch_1500000.ckpt` in the store directory. We use these checkpoints for all trained models.
+After 1.5M steps, the training script will write a checkpoint named `epoch_1500000.ckpt` in the corresponding directory. We use these checkpoints for all trained models.
 ## Fetching Datasets
 
 We provide scripts for fetching and splitting the datasets used in the paper, **with the exception of the filosax** dataset, which is open but requires a [download permission](https://zenodo.org/records/6335779#.Y_OMgy-l3T9) from the authors.
@@ -54,13 +54,16 @@ rave generate --model path/to/my_drumset_model.ckpt \
 ```
 
 ### Audio Quality (Using Frechet Audio Distance)
-We compute the Frechet Audio Distance with the `fad.py` script. This script consumes a `json` config file that specifies where to find the **background** audio files (we use the train set files) and the *resynthesized* files of all of the models you may wish to test. You can include here the reference test data.
+We compute the Frechet Audio Distance with the `fad.py` script. This script consumes a `json` config file that specifies where to find the **background** audio files (we use the train set files) and the **resynthesized** files of all of the models you may wish to test. You can include here the reference test data.
 
 We provide an example config file at `experiments/fad` to compute FAD on drumset for a series of models.
 
 ```bash
-python ./scripts/fad.py
+python ./scripts/fad.py ./experiments/fad/drumset.json
 ```
+Edit the `json` file to point to the resynthesis folders.
+
+The script will print the distance between the background and each resynthesized distribution using VGGish embeddings.
 
 ### Latency
 

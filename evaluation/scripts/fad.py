@@ -1,14 +1,24 @@
 import os
 import json
 import logging
+import sys
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format="%(levelname)s - %(message)s")
 
 def main():
+    if len(sys.argv) != 2:
+        logging.error("Usage: python script.py <config.json>")
+        exit(1)
 
-    with open("./experiments/fad/drumset.json", "r") as config_file:
-        config = json.load(config_file)
+    config_path = sys.argv[1]; del sys.argv[1]
+    # Load config file
+    try:
+        with open(config_path, "r") as config_file:
+            config = json.load(config_file)
+    except Exception as e:
+        logging.error(f"Failed to load config file: {e}")
+        exit(1)
 
     background_path = config.get("background_path")
     resynth_paths = config.get("resynth_paths", [])
@@ -43,7 +53,6 @@ def main():
         )
         results[resynth_path] = distance
         logging.info(f"Distance for {resynth_path}: {distance:.2f}")
-
 
 if __name__ == "__main__":
     main()
