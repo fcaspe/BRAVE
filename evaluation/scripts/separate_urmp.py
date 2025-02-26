@@ -1,6 +1,5 @@
 import argparse
 import os
-import sys
 from functools import partial
 from pathlib import Path
 from shutil import copyfile
