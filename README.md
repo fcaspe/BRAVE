@@ -1,7 +1,7 @@
 <h1 align="center">Designing Neural Synthesizers for Low Latency Interaction</h1>
 <div align="center">
 <h3>
-    <a href="http://insert_link_here" target="_blank">paper</a> - <a href="https://fcaspe.github.io/brave" target="_blank">audio examples</a> - <a href="https://fcaspe.github.io/brave" target="_blank">NAS evaluation pack</a> - <a href="https://fcaspe.github.io/braveplugin" target="_blank">low-latency plugin</a>
+    <a href="http://insert_link_here" target="_blank">paper</a> - <a href="https://fcaspe.github.io/brave" target="_blank">audio examples</a> - <a href="https://github.com/jorshi/neural-latency-eval" target="_blank">NAS evaluation pack</a> - <a href="https://fcaspe.github.io/braveplugin" target="_blank">low-latency plugin</a>
 </h3>
 
 </div>
@@ -42,7 +42,7 @@ rave train --config ./configs/brave.gin --name my_brave_run --db_path path/to/pr
 
 ### Low-latency BRAVE Plugin
 
-The [BRAVE plugin](link_to_plugin) can run BRAVE models at < 10 ms latency and low jitter (~3 ms).
+The [BRAVE plugin](https://fcaspe.github.io/braveplugin) can run BRAVE models at < 10 ms latency and low jitter (~3 ms).
 
 Use the `export_brave_plugin.py` utility to export a trained model. This requires a BRAVE checkpoint (`.ckpt`) created with `rave train`.  
 It does not work with models exported to TorchScript (`.ts`).
