@@ -1,13 +1,16 @@
 <h1 align="center">Designing Neural Synthesizers for Low Latency Interaction</h1>
 <div align="center">
 <h3>
-    <a href="http://insert_link_here" target="_blank">paper</a> - <a href="https://fcaspe.github.io/brave" target="_blank">audio examples</a> - <a href="https://fcaspe.github.io/brave" target="_blank">NAS evaluation pack</a> - <a href="https://fcaspe.github.io/brave" target="_blank">low-latency plugin</a>
+    <a href="http://insert_link_here" target="_blank">paper</a> - <a href="https://fcaspe.github.io/brave" target="_blank">audio examples</a> - <a href="https://fcaspe.github.io/brave" target="_blank">NAS evaluation pack</a> - <a href="https://fcaspe.github.io/braveplugin" target="_blank">low-latency plugin</a>
 </h3>
 
 </div>
 
 
-This repo contains the official Pytorch implementaiton of **BRAVE** a low-latency audio variational autoencoder for instrumental performance. It also implements all of the [other models tested on the paper](link_to_replication).
+This repo contains the official Pytorch implementaiton of **BRAVE** a low-latency audio variational autoencoder for instrumental performance. It also implements all of the [other models tested on the paper](https://github.com/fcaspe/BRAVE/tree/main/configs).
+
+Check the [`evaluation`](https://github.com/fcaspe/BRAVE/tree/main/evaluation) directory for info on replicating the results of the paper.
+
 
 ## Install
 
@@ -18,6 +21,7 @@ pip install h5py acids-rave==2.3 # may work with lower versions too.
 conda install ffmpeg
 # [TODO] git clone the repo chdir
 ```
+
 ## Preparing Dataset
 
 We use the same `rave preprocess` tool as RAVE for dataset preparation. Also, RAVE datasets will work with this repo's models. [Check RAVE's info on dataset preparation](https://github.com/acids-ircam/RAVE?tab=readme-ov-file#dataset-preparation).
