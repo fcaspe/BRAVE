@@ -70,7 +70,7 @@ The script will print the distance between the background and each resynthesized
 The latency test requires a GPU to perform fast inference on a battery of synthetic test data, measuring the delay of the response when given known excitations. The results are stored under the name `EXPERIMENT_ID`.
 
 ```bash
-python ./scripts/test_latency.py --model /path/to/checkpoint.ckpt --gpu 0 --name EXPERIMENT_ID
+python ./scripts/latency.py --model /path/to/checkpoint.ckpt --gpu 0 --name EXPERIMENT_ID
 ```
 
 ### Timbre Transfer Evaluation
