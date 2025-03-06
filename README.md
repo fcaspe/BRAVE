@@ -1,7 +1,7 @@
 <h1 align="center">Designing Neural Synthesizers for Low Latency Interaction</h1>
 <div align="center">
 <h3>
-    <a href="http://insert_link_here" target="_blank">paper</a> - <a href="https://fcaspe.github.io/brave" target="_blank">audio examples</a> - <a href="https://github.com/jorshi/neural-latency-eval" target="_blank">NAS evaluation pack</a> - <a href="https://fcaspe.github.io/braveplugin" target="_blank">low-latency plugin</a>
+    <a href="http://insert_link_here" target="_blank">paper</a> - <a href="https://fcaspe.github.io/brave" target="_blank">audio examples</a> - <a href="https://github.com/jorshi/nas-eval" target="_blank">NAS evaluation pack</a> - <a href="https://fcaspe.github.io/braveplugin" target="_blank">low-latency plugin</a>
 </h3>
 
 </div>
