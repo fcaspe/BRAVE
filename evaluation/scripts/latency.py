@@ -55,9 +55,6 @@ def main(argv):
             logging.error("run not found in folder %s"%model_path)
         model = model.load_from_checkpoint(run)
         model = model.eval()
-        # if (model.decoder.cumulative_delay % 2) == 1:
-        #     model.pqmf.reverse_half = rave.pqmf.reverse_half_alternative
-        #     print('[INFO] PQMF Adjusted for odd cumulative delay.')
 
     # device
     if FLAGS.gpu >= 0:

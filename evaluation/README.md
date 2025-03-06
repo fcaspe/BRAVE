@@ -7,7 +7,7 @@ Some additional tools are required for running the evaluations of the paper:
 
 ```bash
 pip install frechet_audio_distance
-pip install git+https://github.com/jorshi/neural-latency-eval #installs nleval package
+pip install git+https://github.com/jorshi/neural-latency-eval #installs nas_eval package
 
 ```
 
