@@ -95,13 +95,8 @@ Likewise, you can compute the MMD distance between the references and the resynt
 nas-eval timbre ./experiments/test_audios/ ./reconstructions/ --matrix drumset-drumset
 ```
 
-Please refer to the `nas-eval` [evaluation pack](https://github.com/jorshi/nas-eval) for further details on how to perform timbre transfer evaluation.
+Please refer to the `nas_eval` [evaluation pack](https://github.com/jorshi/nas-eval) for further details on how to perform timbre transfer evaluation.
 
 ### Content Preservation
 
-```bash
-nas-eval loudness ./experiments/test_audios/ ./reconstructions/ --matrix drumset-drumset
-nas-eval pitch ./experiments/test_audios/ ./reconstructions/ --matrix filosax-filosax
-```
-
-Please refer to the `nas-eval` [evaluation pack](https://github.com/jorshi/nas-eval) for further details on how to perform content preservation evaluation.
+Please refer to the `nas_eval` [evaluation pack](https://github.com/jorshi/nas-eval) for details on how to perform content preservation evaluation.
