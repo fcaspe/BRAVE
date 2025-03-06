@@ -86,22 +86,22 @@ This evaluation requires two directory trees with a similar structure:
 **Examples:**
 With that structrure prepared, you can compute the MMD distance between the references, and the `beatbox` dataset *timbre transferred* to `drumset`, as performed by all models, with: 
 ```bash
-nleval-mmd --matrix beatbox-drumset --references ./experiments/test_audios/ --reconstructions ./reconstructions/
+nas-eval timbre ./experiments/test_audios/ ./reconstructions/ --matrix beatbox-drumset
 ```
 
 
 Likewise, you can compute the MMD distance between the references and the resynthesized `drumset` as performed by all models with:
 ```bash
-nleval-mmd --matrix drumset-drumset --references ./experiments/test_audios/ --reconstructions ./reconstructions/
+nas-eval timbre ./experiments/test_audios/ ./reconstructions/ --matrix drumset-drumset
 ```
 
-Please refer to the `nleval` [evaluation pack](https://github.com/jorshi/neural-latency-eval) for further details on how to perform timbre transfer evaluation.
+Please refer to the `nas-eval` [evaluation pack](https://github.com/jorshi/nas-eval) for further details on how to perform timbre transfer evaluation.
 
 ### Content Preservation
 
 ```bash
-nleval-content --eval loudness
-nleval-content --eval pitch
+nas-eval loudness ./experiments/test_audios/ ./reconstructions/ --matrix drumset-drumset
+nas-eval pitch ./experiments/test_audios/ ./reconstructions/ --matrix filosax-filosax
 ```
 
-Please refer to the `nleval` [evaluation pack](https://github.com/jorshi/neural-latency-eval) for further details on how to perform content preservation evaluation.
+Please refer to the `nas-eval` [evaluation pack](https://github.com/jorshi/nas-eval) for further details on how to perform content preservation evaluation.
