@@ -1,7 +1,7 @@
 from absl import app, flags, logging
 import torch, os, gin
 import cached_conv as cc
-from nleval import NeuralLatencyEvaluator, ModelWrapper
+from nas_eval import NeuralLatencyEvaluator, ModelWrapper
 
 import numpy
 try:
@@ -55,9 +55,6 @@ def main(argv):
             logging.error("run not found in folder %s"%model_path)
         model = model.load_from_checkpoint(run)
         model = model.eval()
-        if (model.decoder.cumulative_delay % 2) == 1:
-            model.pqmf.reverse_half = rave.pqmf.reverse_half_alternative
-            print('[INFO] PQMF Adjusted for odd cumulative delay.')
 
     # device
     if FLAGS.gpu >= 0:
@@ -72,17 +69,18 @@ def main(argv):
         model(x)
     def eval_forward(x):
         return model(x)
-    def samplerate():
+    def sample_rate():
         return model.sr
     def current_device():
         return model.device
     wrapper.forward = eval_forward
     wrapper.reset = eval_reset
-    wrapper.samplerate = samplerate
+    wrapper.sample_rate = sample_rate
     wrapper.current_device = current_device
 
-    evaluator = NeuralLatencyEvaluator(wrapper,FLAGS.name)
+    evaluator = NeuralLatencyEvaluator(wrapper)
     evaluator.evaluate()
+    evaluator.save_results(FLAGS.name)
 
 if __name__ == "__main__": 
     app.run(main)

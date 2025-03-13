@@ -7,7 +7,7 @@ Some additional tools are required for running the evaluations of the paper:
 
 ```bash
 pip install frechet_audio_distance
-pip install git+https://github.com/jorshi/neural-latency-eval #installs nleval package
+pip install git+https://github.com/jorshi/neural-latency-eval #installs nas_eval package
 
 ```
 
@@ -70,7 +70,7 @@ The script will print the distance between the background and each resynthesized
 The latency test requires a GPU to perform fast inference on a battery of synthetic test data, measuring the delay of the response when given known excitations. The results are stored under the name `EXPERIMENT_ID`.
 
 ```bash
-python ./scripts/test_latency.py --model /path/to/checkpoint.ckpt --gpu 0 --name EXPERIMENT_ID
+python ./scripts/latency.py --model /path/to/checkpoint.ckpt --gpu 0 --name EXPERIMENT_ID
 ```
 
 ### Timbre Transfer Evaluation
@@ -86,22 +86,17 @@ This evaluation requires two directory trees with a similar structure:
 **Examples:**
 With that structrure prepared, you can compute the MMD distance between the references, and the `beatbox` dataset *timbre transferred* to `drumset`, as performed by all models, with: 
 ```bash
-nleval-mmd --matrix beatbox-drumset --references ./experiments/test_audios/ --reconstructions ./reconstructions/
+nas-eval timbre ./experiments/test_audios/ ./reconstructions/ --matrix beatbox-drumset
 ```
 
 
 Likewise, you can compute the MMD distance between the references and the resynthesized `drumset` as performed by all models with:
 ```bash
-nleval-mmd --matrix drumset-drumset --references ./experiments/test_audios/ --reconstructions ./reconstructions/
+nas-eval timbre ./experiments/test_audios/ ./reconstructions/ --matrix drumset-drumset
 ```
 
-Please refer to the `nleval` [evaluation pack](https://github.com/jorshi/neural-latency-eval) for further details on how to perform timbre transfer evaluation.
+Please refer to the `nas_eval` [evaluation pack](https://github.com/jorshi/nas-eval) for further details on how to perform timbre transfer evaluation.
 
 ### Content Preservation
 
-```bash
-nleval-content --eval loudness
-nleval-content --eval pitch
-```
-
-Please refer to the `nleval` [evaluation pack](https://github.com/jorshi/neural-latency-eval) for further details on how to perform content preservation evaluation.
+Please refer to the `nas_eval` [evaluation pack](https://github.com/jorshi/nas-eval) for details on how to perform content preservation evaluation.
