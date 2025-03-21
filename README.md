@@ -1,7 +1,7 @@
 <h1 align="center">Designing Neural Synthesizers for Low Latency Interaction</h1>
 <div align="center">
 <h3>
-    <a href="http://insert_link_here" target="_blank">paper</a> - <a href="https://fcaspe.github.io/brave" target="_blank">audio examples</a> - <a href="https://github.com/jorshi/nas-eval" target="_blank">NAS evaluation package</a> - <a href="https://fcaspe.github.io/braveplugin" target="_blank">low-latency plugin</a>
+    <a href="https://arxiv.org/abs/2503.11562" target="_blank">paper</a> - <a href="https://fcaspe.github.io/brave" target="_blank">audio examples</a> - <a href="https://github.com/jorshi/nas-eval" target="_blank">NAS evaluation package</a> - <a href="https://fcaspe.github.io/braveplugin" target="_blank">low-latency plugin</a>
 </h3>
 
 </div>
@@ -19,7 +19,8 @@ We use the **acids-rave** package for preprocessing the audio datasets and train
 ```bash
 pip install h5py acids-rave==2.3 # may work with lower versions too.
 conda install ffmpeg
-# [TODO] git clone the repo chdir
+git clone https://github.com/fcaspe/BRAVE
+cd BRAVE
 ```
 
 ## Preparing Dataset
