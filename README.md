@@ -1,4 +1,4 @@
-<h1 align="center">Designing Neural Synthesizers for Low Latency Interaction</h1>
+<h1 align="center">Designing Neural Synthesizers for Low-Latency Interaction</h1>
 <div align="center">
 <h3>
     <a href="https://arxiv.org/abs/2503.11562" target="_blank">paper</a> - <a href="https://fcaspe.github.io/brave" target="_blank">audio examples</a> - <a href="https://github.com/jorshi/nas-eval" target="_blank">NAS evaluation package</a> - <a href="https://fcaspe.github.io/BravePlugin" target="_blank">low-latency plugin</a>
@@ -74,7 +74,7 @@ If you find this work useful please consider citing our paper:
 
 ```bibtex
 @article{caspe2025designing,
-    title={{Designing Neural Synthesizers for Low Latency Interaction}},
+    title={{Designing Neural Synthesizers for Low-Latency Interaction}},
     author={Caspe, Franco and Shier, Jordie and Sandler, Mark and Saitis, Charis and McPherson, Andrew},
     journal={Journal of the Audio Engineering Society},
     year={2025}
